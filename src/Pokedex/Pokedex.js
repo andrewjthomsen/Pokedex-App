@@ -16,10 +16,13 @@ class Pokedex extends Component {
       { id: 133, name: "Eevee", type: "normal", base_experience: 65 }
     ]
   };
+  // possibly change line 25 to an if statement
   render() {
     return (
       <div className="Pokedex">
         <h1>Pokedex</h1>
+        <p>Total Experience: { this.props.base_experience} </p>
+        <p>{this.props.isWinner ? 'Winner' : 'Loser!'}</p>
         <div className="Pokedex_cards">
           {" "}
           {this.props.pokemon.map(p => (
